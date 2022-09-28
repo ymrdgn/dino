@@ -246,13 +246,24 @@ position = Vector2( -96, -160 )
 position = Vector2( 96, 160 )
 tile_set = SubResource( 13 )
 cell_size = Vector2( 128, 128 )
+collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -65521, 6, 0, -65520, 7, 0, -65519, 8, 0, 65547, 6, 0, 65548, 7, 0, 65549, 8, 0, 196611, 6, 0, 196612, 7, 0, 196613, 8, 0, 196615, 6, 0, 196616, 7, 0, 196617, 8, 0, 393207, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0 )
-
-[node name="player" parent="." instance=ExtResource( 3 )]
 
 [node name="mush" parent="." instance=ExtResource( 4 )]
 position = Vector2( 655, 544 )
 
 [node name="mush2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1167, 545 )
+
+[node name="mush3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1694, 287 )
+
+[node name="mush4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2230, 38 )
+
+[node name="mush5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 178, 810 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -10, 513 )

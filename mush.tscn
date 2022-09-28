@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/sounds/Pick.wav" type="AudioStream" id=1]
 [ext_resource path="res://Entities/objects/Mushroom_1.png" type="Texture" id=2]
+[ext_resource path="res://mush.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 25.0
@@ -111,6 +112,8 @@ tracks/3/keys = {
 
 [node name="mush" type="Area2D"]
 scale = Vector2( 1.5, 1.5 )
+collision_layer = 4
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -130,3 +133,5 @@ anims/hit = SubResource( 3 )
 
 [node name="hit_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_mush_body_entered"]
