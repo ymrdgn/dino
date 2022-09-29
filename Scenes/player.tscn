@@ -3,7 +3,7 @@
 [ext_resource path="res://Entities/player/Walk (3).png" type="Texture" id=1]
 [ext_resource path="res://Entities/player/Walk (5).png" type="Texture" id=2]
 [ext_resource path="res://Entities/player/Walk (6).png" type="Texture" id=3]
-[ext_resource path="res://player.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/player.gd" type="Script" id=4]
 [ext_resource path="res://Entities/player/Idle (4).png" type="Texture" id=5]
 [ext_resource path="res://Entities/sounds/Jump.wav" type="AudioStream" id=6]
 [ext_resource path="res://Entities/player/Idle (6).png" type="Texture" id=7]
