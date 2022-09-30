@@ -29,8 +29,12 @@ func _process(_delta):
 			is_jumping = true
 			velocity.y += -JUMP
 			
-	velocity.y += GRAVITY
 	velocity.x = direction * SPEED
+	velocity.y += GRAVITY
+	
+	if position.y > 3000:
+		var _error = get_tree().reload_current_scene()
+	
 	#move_and_collide(velocity) # duvarların içinden geçemiyoruz artık
 	velocity = move_and_slide(velocity, Vector2(0,-1)) #hareket ettir ve kaydır
 	update_animation()

@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/sounds/Pick.wav" type="AudioStream" id=1]
-[ext_resource path="res://Entities/objects/Mushroom_1.png" type="Texture" id=2]
+[ext_resource path="res://Entities/objects/cherry.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/mush.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 25.0
+radius = 250.923
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -110,7 +110,7 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
-[node name="mush" type="Area2D"]
+[node name="cherry" type="Area2D"]
 scale = Vector2( 1.5, 1.5 )
 collision_layer = 4
 script = ExtResource( 3 )
@@ -123,7 +123,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, -20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -20 )
+position = Vector2( 8.66667, 44 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

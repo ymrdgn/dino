@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scripts/mush.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/finish.gd" type="Script" id=1]
 [ext_resource path="res://Entities/sounds/finish.wav" type="AudioStream" id=2]
 [ext_resource path="res://Entities/objects/Sign_1.png" type="Texture" id=3]
 
@@ -48,7 +48,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "hit"
-length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -56,7 +55,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.266667, 0.917647, 0.00392157, 1 ) ]
@@ -68,7 +67,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -96,10 +95,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.662745, 0.0117647, 0.0117647, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.85098, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../hit_sound:playing")
@@ -127,7 +126,7 @@ tracks/2/keys = {
 }
 
 [node name="finish" type="Area2D"]
-scale = Vector2( 1.5, 1.5 )
+scale = Vector2( 2, 2 )
 collision_layer = 4
 script = ExtResource( 1 )
 __meta__ = {

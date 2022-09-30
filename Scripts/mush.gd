@@ -1,7 +1,8 @@
 extends Area2D
 
-onready var main = get_tree().get_current_scene()
+var main
 func _ready():
+	main = get_tree().get_current_scene()
 	pass
 
 
