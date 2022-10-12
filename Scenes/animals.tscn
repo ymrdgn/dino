@@ -1,31 +1,25 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/world.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/orange.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/lemon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/cat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/cherry.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/tiles/2.png" type="Texture" id=4]
 [ext_resource path="res://Entities/tiles/6.png" type="Texture" id=5]
 [ext_resource path="res://Entities/tiles/15.png" type="Texture" id=6]
 [ext_resource path="res://Entities/tiles/4.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/cherry.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/apple.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Entities/tiles/5.png" type="Texture" id=9]
 [ext_resource path="res://Entities/tiles/14.png" type="Texture" id=10]
 [ext_resource path="res://Entities/tiles/1.png" type="Texture" id=11]
 [ext_resource path="res://Entities/tiles/13.png" type="Texture" id=12]
 [ext_resource path="res://Entities/tiles/3.png" type="Texture" id=13]
-[ext_resource path="res://Scenes/pomegranate.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/pear.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/apple.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/kiwi.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/finish.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/banana.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/lemon.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/grape.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/banana.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/waterMelon.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/plum.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/strawberry.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Scenes/grape.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Scenes/peach.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/kiwi.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/finish.tscn" type="PackedScene" id=26]
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -264,66 +258,51 @@ tile_set = SubResource( 13 )
 cell_size = Vector2( 128, 128 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -65519, 6, 0, -65518, 7, 0, -65517, 8, 0, 1, 6, 0, 2, 7, 0, 3, 8, 0, 65541, 6, 0, 65542, 7, 0, 65543, 8, 0, 65549, 6, 0, 65550, 7, 0, 65551, 8, 0, 131081, 6, 0, 131082, 7, 0, 131083, 8, 0, 393207, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327716, 1, 0, 327717, 1, 0, 327718, 1, 0, 327719, 2, 0 )
+tile_data = PoolIntArray( 2, 6, 0, 3, 7, 0, 4, 8, 0, 196615, 6, 0, 196616, 7, 0, 196617, 8, 0, 393207, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327716, 1, 0, 327717, 1, 0, 327718, 1, 0, 327719, 2, 0 )
 
-[node name="apple" parent="." instance=ExtResource( 16 )]
-position = Vector2( 480, 96 )
+[node name="apple" parent="." instance=ExtResource( 8 )]
+position = Vector2( 672, 480 )
 scale = Vector2( 0.03, 0.03 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="orange" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1504, -288 )
-scale = Vector2( 0.4, 0.4 )
-
-[node name="cherry" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1056, 224 )
+[node name="cherry" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1694, 264 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="banana" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2528, 416 )
+[node name="banana" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2202, 2 )
 scale = Vector2( 0.03, 0.03 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="lemon" parent="." instance=ExtResource( 3 )]
+[node name="lemon" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2211, -512 )
 rotation = 0.87441
 scale = Vector2( 0.03, 0.03 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="strawberry" parent="." instance=ExtResource( 24 )]
-position = Vector2( 1568, 352 )
-scale = Vector2( 0.12, 0.12 )
-
-[node name="waterMelon" parent="." instance=ExtResource( 21 )]
-position = Vector2( 1056, -544 )
-scale = Vector2( 0.1, 0.1 )
-
-[node name="pomegranate" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1952, -224 )
-scale = Vector2( 0.3, 0.3 )
-
-[node name="peach" parent="." instance=ExtResource( 26 )]
-position = Vector2( 2754, -122 )
-scale = Vector2( 0.05, 0.05 )
-
-[node name="pear" parent="." instance=ExtResource( 15 )]
-position = Vector2( 3232, -391 )
-scale = Vector2( 0.03, 0.03 )
-
-[node name="plum" parent="." instance=ExtResource( 22 )]
-position = Vector2( 3240, -9 )
-scale = Vector2( 0.08, 0.08 )
-
-[node name="kiwi" parent="." instance=ExtResource( 17 )]
+[node name="kiwi" parent="." instance=ExtResource( 24 )]
 position = Vector2( 3616, 257 )
 rotation = -0.328122
 scale = Vector2( 0.05, 0.05 )
 
-[node name="grape" parent="." instance=ExtResource( 25 )]
+[node name="grape" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3103, 519 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="finish" parent="." instance=ExtResource( 18 )]
-position = Vector2( 2528, 32 )
+[node name="finish" parent="." instance=ExtResource( 26 )]
+position = Vector2( 5088, 800 )
 
 [node name="player" parent="." instance=ExtResource( 19 )]
-position = Vector2( 416, -32 )
+position = Vector2( 544, -96 )
 
 [node name="HUD" parent="." instance=ExtResource( 23 )]
+
+[node name="cat" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1169, 526 )
+scale = Vector2( 0.1, 0.1 )
