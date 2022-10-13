@@ -345,3 +345,7 @@ position = Vector2( 5088, 800 )
 position = Vector2( -10, 513 )
 
 [node name="HUD" parent="." instance=ExtResource( 26 )]
+
+[node name="stoneTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="stoneTimer" to="." method="_on_stoneTimer_timeout"]

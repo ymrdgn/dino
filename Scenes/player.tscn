@@ -88,6 +88,8 @@ shape = SubResource( 5 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_bottom = 760
+smoothing_enabled = true
+smoothing_speed = 15.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

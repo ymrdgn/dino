@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Entities/sounds/stone_fall.wav" type="AudioStream" id=1]
+[ext_resource path="res://Entities/objects/Stone.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 44, 27 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.4 )
+colors = PoolColorArray( 1, 0, 0, 1, 0.882812, 0.787386, 0.0103455, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0.0224719, 0.515909 ), 0.0, 0.0, 0, 0, Vector2( 0.994382, 0.0522727 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 180.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+
+[node name="stone" type="RigidBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 3.14159
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 0.5 )
+shape = SubResource( 1 )
+
+[node name="trail" type="Particles2D" parent="."]
+amount = 16
+local_coords = false
+process_material = SubResource( 6 )
+texture = ExtResource( 2 )
+
+[node name="fall_stone" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
