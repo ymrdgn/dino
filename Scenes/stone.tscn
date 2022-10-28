@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Entities/sounds/stone_fall.wav" type="AudioStream" id=1]
 [ext_resource path="res://Entities/objects/Stone.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 44, 27 )
+[ext_resource path="res://Scenes/stone.gd" type="Script" id=3]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.4 )
@@ -14,7 +12,7 @@ colors = PoolColorArray( 1, 0, 0, 1, 0.882812, 0.787386, 0.0103455, 1 )
 gradient = SubResource( 2 )
 
 [sub_resource type="Curve" id=4]
-_data = [ Vector2( 0.0224719, 0.515909 ), 0.0, 0.0, 0, 0, Vector2( 0.994382, 0.0522727 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0.011236, 0.425 ), 0.0, 0.0, 0, 0, Vector2( 0.994382, 0.0522727 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=5]
 curve = SubResource( 4 )
@@ -28,21 +26,35 @@ angle = 180.0
 scale_curve = SubResource( 5 )
 color_ramp = SubResource( 3 )
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 44, 27 )
+
 [node name="stone" type="RigidBody2D"]
+collision_layer = 8
+gravity_scale = 0.0
+script = ExtResource( 3 )
+
+[node name="trail" type="Particles2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+amount = 16
+local_coords = false
+process_material = SubResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 3.14159
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1, 0.5 )
 shape = SubResource( 1 )
 
-[node name="trail" type="Particles2D" parent="."]
-amount = 16
-local_coords = false
-process_material = SubResource( 6 )
-texture = ExtResource( 2 )
-
 [node name="fall_stone" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+autoplay = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -342,7 +342,7 @@ scale = Vector2( 0.3, 0.3 )
 position = Vector2( 5088, 800 )
 
 [node name="player" parent="." instance=ExtResource( 25 )]
-position = Vector2( -10, 513 )
+position = Vector2( -224, 480 )
 
 [node name="HUD" parent="." instance=ExtResource( 26 )]
 

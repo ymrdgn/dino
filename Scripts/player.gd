@@ -1,8 +1,11 @@
 extends KinematicBody2D
+
+var stone
 var direction = 0
 var velocity = Vector2()
 var is_jumping = false
 var fall_has_played = false
+
 const SPEED:int = 400
 const GRAVITY = 100
 const JUMP = 2000
@@ -75,3 +78,14 @@ func update_animation():
 	
 	if dino.flip_h == false and dino.offset.x < 0:
 		dino.offset *= -1
+
+
+func _on_Area2D_body_entered(body):
+	if body.name.find("stone",0) != -1:
+		self.stone = body
+		$stoneTimer.start()
+		$AnimationPlayer.play("hit")
+
+func _on_stoneTimer_timeout():
+	if self.stone != null:
+		self.stone.queue_free()
