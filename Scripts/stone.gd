@@ -12,10 +12,10 @@ func _process(delta):
 	if position.y > screen_size.y:
 		queue_free()
 
-
 func _on_VisibilityNotifier2D_screen_entered():
-	pass # Replace with function body.
-
+	if not $fall_stone.playing:
+		$fall_stone.play()
 
 func _on_VisibilityNotifier2D_screen_exited():
-	pass # Replace with function body.
+	if $fall_stone.playing:
+		$fall_stone.stop()

@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var main
 var stone
 var direction = 0
 var velocity = Vector2()
@@ -16,7 +17,7 @@ onready var jump = get_node("jump_sound")
 onready var fall = get_node("fall_sound")
 
 func _ready():
-	pass 
+	main = get_tree().get_current_scene() 
 
 func _process(_delta):
 	direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -42,7 +43,15 @@ func _process(_delta):
 	velocity = move_and_slide(velocity, Vector2(0,-1)) #hareket ettir ve kaydır
 	update_animation()
 func update_animation():
+	
 	if is_on_floor():
+		if main.health == 0:
+			dino.play("Dead")
+			if dino.frame == 7:
+				var _error = get_tree().reload_current_scene()
+			else:
+				return
+				
 		is_jumping = false
 		fall_has_played = false
 		if direction == 1:
@@ -83,9 +92,15 @@ func update_animation():
 func _on_Area2D_body_entered(body):
 	if body.name.find("stone",0) != -1:
 		self.stone = body
-		$stoneTimer.start()
+		$explosion.emitting = true
+		if not $explosion/explosion_sound.playing:
+			$explosion/explosion_sound.play()
 		$AnimationPlayer.play("hit")
-
+		if main.health > 0:
+			main.health -= 20
+		main.get_node("HUD").update_health(main.health)
+		$stoneTimer.start()
+		
 func _on_stoneTimer_timeout():
 	if self.stone != null:
 		self.stone.queue_free()

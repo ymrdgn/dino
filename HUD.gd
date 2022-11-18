@@ -7,6 +7,10 @@ func show_message(text):
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
+	
+func update_health(health):
+	$ProgressBar.value = health
 
 func _on_MsgTimer_timeout():
 	$Msg.hide()
+	

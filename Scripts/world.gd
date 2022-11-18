@@ -3,6 +3,7 @@ extends Node2D
 var scene = load("res://Scenes/stone.tscn")
 var stone
 var score = 0
+var health = 100
 const FRUIT_LENGTH = 4096 #SAHNENİN YATAY BOYU
 
 func _ready():

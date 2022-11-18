@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Entities/sounds/stone_fall.wav" type="AudioStream" id=1]
+[ext_resource path="res://Entities/sounds/fall_stone.wav" type="AudioStream" id=1]
 [ext_resource path="res://Entities/objects/Stone.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/stone.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/stone.gd" type="Script" id=3]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.4 )
@@ -52,7 +52,6 @@ shape = SubResource( 1 )
 
 [node name="fall_stone" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
-autoplay = true
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 

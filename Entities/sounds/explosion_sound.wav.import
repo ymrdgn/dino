@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/stone_fall.wav-f5253e1c8a4280657cd6bec43076000d.sample"
+path="res://.import/explosion_sound.wav-14866e0ec93f14c5caf85f399b9321ff.sample"
 
 [deps]
 
-source_file="res://Entities/sounds/stone_fall.wav"
-dest_files=[ "res://.import/stone_fall.wav-f5253e1c8a4280657cd6bec43076000d.sample" ]
+source_file="res://Entities/sounds/explosion_sound.wav"
+dest_files=[ "res://.import/explosion_sound.wav-14866e0ec93f14c5caf85f399b9321ff.sample" ]
 
 [params]
 
