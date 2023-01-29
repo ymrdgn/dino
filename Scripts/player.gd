@@ -6,9 +6,10 @@ var direction = 0
 var velocity = Vector2()
 var is_jumping = false
 var fall_has_played = false
+var hit = false
 
-const SPEED:int = 400
-const GRAVITY = 100
+const SPEED = 400
+const GRAVITY = 50
 const JUMP = 2000
 
 onready var dino = get_node("Sprite")
@@ -43,7 +44,13 @@ func _process(_delta):
 	velocity = move_and_slide(velocity, Vector2(0,-1)) #hareket ettir ve kaydır
 	update_animation()
 func update_animation():
-	
+	if hit == true :
+		dino.play("Dead")
+		if dino.frame == 0:
+			return
+		else:
+			hit = false
+			
 	if is_on_floor():
 		if main.health == 0:
 			dino.play("Dead")
@@ -91,6 +98,7 @@ func update_animation():
 
 func _on_Area2D_body_entered(body):
 	if body.name.find("stone",0) != -1:
+		hit = true
 		self.stone = body
 		$explosion.emitting = true
 		if not $explosion/explosion_sound.playing:

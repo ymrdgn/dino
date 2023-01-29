@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://Scripts/world.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/animals.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/cat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/cherry.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/tiles/2.png" type="Texture" id=4]
@@ -306,3 +306,7 @@ position = Vector2( 544, -96 )
 [node name="cat" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1169, 526 )
 scale = Vector2( 0.1, 0.1 )
+
+[node name="stoneTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="stoneTimer" to="." method="_on_stoneTimer_timeout"]
