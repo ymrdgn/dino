@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Fall.wav-b8183dcc024195961e5afdae3ea5d260.sample"
+type="AudioStreamWAV"
+uid="uid://hnriwlaqabm7"
+path="res://.godot/imported/Fall.wav-b8183dcc024195961e5afdae3ea5d260.sample"
 
 [deps]
 
 source_file="res://Entities/sounds/Fall.wav"
-dest_files=[ "res://.import/Fall.wav-b8183dcc024195961e5afdae3ea5d260.sample" ]
+dest_files=["res://.godot/imported/Fall.wav-b8183dcc024195961e5afdae3ea5d260.sample"]
 
 [params]
 

@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var main
 var stone
@@ -12,10 +12,10 @@ const SPEED = 400
 const GRAVITY = 50
 const JUMP = 2000
 
-onready var dino = get_node("Sprite")
-onready var walk = get_node("walk_sound")
-onready var jump = get_node("jump_sound")
-onready var fall = get_node("fall_sound")
+@onready var dino = get_node("Sprite2D")
+@onready var walk = get_node("walk_sound")
+@onready var jump = get_node("jump_sound")
+@onready var fall = get_node("fall_sound")
 
 func _ready():
 	main = get_tree().get_current_scene() 
@@ -41,7 +41,10 @@ func _process(_delta):
 		var _error = get_tree().reload_current_scene()
 	
 	#move_and_collide(velocity) # duvarların içinden geçemiyoruz artık
-	velocity = move_and_slide(velocity, Vector2(0,-1)) #hareket ettir ve kaydır
+	set_velocity(velocity)
+	set_up_direction(Vector2(0,-1))
+	move_and_slide()
+	velocity = velocity #hareket ettir ve kaydır
 	update_animation()
 func update_animation():
 	if hit == true :

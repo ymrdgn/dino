@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/fall_stone.wav-d4d540018c4745c4965ad0ba2b8e2e4d.sample"
+type="AudioStreamWAV"
+uid="uid://bftllqcg6dmus"
+path="res://.godot/imported/fall_stone.wav-d4d540018c4745c4965ad0ba2b8e2e4d.sample"
 
 [deps]
 
 source_file="res://Entities/sounds/fall_stone.wav"
-dest_files=[ "res://.import/fall_stone.wav-d4d540018c4745c4965ad0ba2b8e2e4d.sample" ]
+dest_files=["res://.godot/imported/fall_stone.wav-d4d540018c4745c4965ad0ba2b8e2e4d.sample"]
 
 [params]
 

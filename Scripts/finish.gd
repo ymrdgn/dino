@@ -19,7 +19,7 @@ func _on_AnimationPlayer_animation_finished(_anim_name):
 	if main.score == 3:
 		queue_free()
 		if main.name == "Fruits":
-			error = get_tree().change_scene("res://Scenes/animals.tscn")
+			error = get_tree().change_scene_to_file("res://Scenes/animals.tscn")
 		else:
-			error = get_tree().change_scene("res://Scenes/fruits.tscn")
+			error = get_tree().change_scene_to_file("res://Scenes/fruits.tscn")
 	
