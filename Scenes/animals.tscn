@@ -1,311 +1,164 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=35 format=3]
 
-[ext_resource path="res://Scripts/animals.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/cat.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/cherry.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Entities/tiles/2.png" type="Texture2D" id=4]
-[ext_resource path="res://Entities/tiles/6.png" type="Texture2D" id=5]
-[ext_resource path="res://Entities/tiles/15.png" type="Texture2D" id=6]
-[ext_resource path="res://Entities/tiles/4.png" type="Texture2D" id=7]
-[ext_resource path="res://Scenes/apple.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Entities/tiles/5.png" type="Texture2D" id=9]
-[ext_resource path="res://Entities/tiles/14.png" type="Texture2D" id=10]
-[ext_resource path="res://Entities/tiles/1.png" type="Texture2D" id=11]
-[ext_resource path="res://Entities/tiles/13.png" type="Texture2D" id=12]
-[ext_resource path="res://Entities/tiles/3.png" type="Texture2D" id=13]
-[ext_resource path="res://Scenes/banana.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/lemon.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/grape.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/kiwi.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Scenes/finish.tscn" type="PackedScene" id=26]
+[ext_resource type="Script" path="res://Scripts/animals.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/cat.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scenes/cherry.tscn" id="3"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/2.png" id="4"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/6.png" id="5"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/15.png" id="6"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/4.png" id="7"]
+[ext_resource type="PackedScene" path="res://Scenes/apple.tscn" id="8"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/5.png" id="9"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/14.png" id="10"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/1.png" id="11"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/13.png" id="12"]
+[ext_resource type="Script" path="res://Scripts/mush.gd" id="12_ekte5"]
+[ext_resource type="Texture2D" path="res://Entities/tiles/3.png" id="13"]
+[ext_resource type="PackedScene" path="res://Scenes/banana.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scenes/lemon.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scenes/grape.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="19"]
+[ext_resource type="Script" path="res://Scripts/finish.gd" id="19_n0w0k"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="21_c5avd"]
+[ext_resource type="PackedScene" path="res://Scenes/HUD.tscn" id="23"]
+[ext_resource type="Script" path="res://HUD.gd" id="23_evbad"]
+[ext_resource type="PackedScene" path="res://Scenes/kiwi.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://Scenes/finish.tscn" id="26"]
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PackedVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tdolc"]
+texture = ExtResource("11")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
-points = PackedVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nt03d"]
+texture = ExtResource("4")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
-points = PackedVector2Array( 128, 128, 32, 128, 32, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qvyp"]
+texture = ExtResource("13")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
-points = PackedVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7gat0"]
+texture = ExtResource("7")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
-points = PackedVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2krn"]
+texture = ExtResource("9")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
-points = PackedVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xjmgw"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
-points = PackedVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tm7yw"]
+texture = ExtResource("12")
+texture_region_size = Vector2i(128, 93)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
-points = PackedVector2Array( 128, 96, 0, 96, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5lo4"]
+texture = ExtResource("10")
+texture_region_size = Vector2i(128, 93)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
-points = PackedVector2Array( 128, 96, 0, 96, 0, 0, 128, 0 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlusw"]
+texture = ExtResource("6")
+texture_region_size = Vector2i(128, 93)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
-points = PackedVector2Array( 128, 96, 0, 96, 0, 0, 128, 0 )
-
-[sub_resource type="TileSet" id=13]
-0/name = "1.png 0"
-0/texture = ExtResource( 11 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 128, 128 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 6 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 6 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-1/name = "2.png 1"
-1/texture = ExtResource( 4 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 128, 128 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 7 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 7 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 8 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "3.png 2"
-2/texture = ExtResource( 13 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 128, 128 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 9 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 9 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-3/name = "4.png 3"
-3/texture = ExtResource( 7 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 128, 128 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 10 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 10 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-3/z_index = 0
-4/name = "5.png 4"
-4/texture = ExtResource( 9 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 128, 128 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 11 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 11 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
-5/name = "6.png 5"
-5/texture = ExtResource( 5 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 128, 128 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 12 )
-5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 12 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-5/z_index = 0
-6/name = "13.png 6"
-6/texture = ExtResource( 12 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 0, 128, 96 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 14 )
-6/shape_one_way = false
-6/shape_one_way_margin = 1.0
-6/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 14 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-6/z_index = 0
-7/name = "14.png 7"
-7/texture = ExtResource( 10 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 0, 0, 128, 96 )
-7/tile_mode = 0
-7/occluder_offset = Vector2( 0, 0 )
-7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 15 )
-7/shape_one_way = false
-7/shape_one_way_margin = 1.0
-7/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 15 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-7/z_index = 0
-8/name = "15.png 8"
-8/texture = ExtResource( 6 )
-8/tex_offset = Vector2( 0, 0 )
-8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 0, 0, 128, 96 )
-8/tile_mode = 0
-8/occluder_offset = Vector2( 0, 0 )
-8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 16 )
-8/shape_one_way = false
-8/shape_one_way_margin = 1.0
-8/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 16 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-8/z_index = 0
+[sub_resource type="TileSet" id="TileSet_iykgf"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_tdolc")
+sources/1 = SubResource("TileSetAtlasSource_nt03d")
+sources/2 = SubResource("TileSetAtlasSource_4qvyp")
+sources/3 = SubResource("TileSetAtlasSource_7gat0")
+sources/4 = SubResource("TileSetAtlasSource_u2krn")
+sources/5 = SubResource("TileSetAtlasSource_xjmgw")
+sources/6 = SubResource("TileSetAtlasSource_tm7yw")
+sources/7 = SubResource("TileSetAtlasSource_o5lo4")
+sources/8 = SubResource("TileSetAtlasSource_rlusw")
 
 [node name="Animals" type="Node2D"]
-position = Vector2( -96, -160 )
-script = ExtResource( 1 )
+position = Vector2(-96, -160)
+script = ExtResource("1")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 96, 160 )
-tile_set = SubResource( 13 )
-cell_size = Vector2( 128, 128 )
-collision_layer = 2
-format = 1
-tile_data = PackedInt32Array( 2, 6, 0, 3, 7, 0, 4, 8, 0, 196615, 6, 0, 196616, 7, 0, 196617, 8, 0, 393207, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327716, 1, 0, 327717, 1, 0, 327718, 1, 0, 327719, 2, 0 )
+position = Vector2(96, 160)
+tile_set = SubResource("TileSet_iykgf")
+format = 2
+layer_0/tile_data = PackedInt32Array(2, 6, 0, 3, 7, 0, 4, 8, 0, 196615, 6, 0, 196616, 7, 0, 196617, 8, 0, 393207, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327716, 1, 0, 327717, 1, 0, 327718, 1, 0, 327719, 2, 0)
 
-[node name="apple" parent="." instance=ExtResource( 8 )]
-position = Vector2( 672, 480 )
-scale = Vector2( 0.03, 0.03 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="apple" type="Area2D" parent="." instance=ExtResource("8")]
+position = Vector2(672, 480)
+scale = Vector2(0.03, 0.03)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
-[node name="cherry" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1694, 264 )
-scale = Vector2( 0.25, 0.25 )
+[node name="cherry" type="Area2D" parent="." instance=ExtResource("3")]
+position = Vector2(1694, 264)
+scale = Vector2(0.25, 0.25)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
-[node name="banana" parent="." instance=ExtResource( 14 )]
-position = Vector2( 2202, 2 )
-scale = Vector2( 0.03, 0.03 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="banana" type="Area2D" parent="." instance=ExtResource("14")]
+position = Vector2(2202, 2)
+scale = Vector2(0.03, 0.03)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
-[node name="lemon" parent="." instance=ExtResource( 15 )]
-position = Vector2( 2211, -512 )
+[node name="lemon" type="Area2D" parent="." instance=ExtResource("15")]
+position = Vector2(2211, -512)
 rotation = 0.87441
-scale = Vector2( 0.03, 0.03 )
-__meta__ = {
-"_edit_group_": true
-}
+scale = Vector2(0.03, 0.03)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
-[node name="kiwi" parent="." instance=ExtResource( 24 )]
-position = Vector2( 3616, 257 )
+[node name="kiwi" type="Area2D" parent="." instance=ExtResource("24")]
+position = Vector2(3616, 257)
 rotation = -0.328122
-scale = Vector2( 0.05, 0.05 )
+scale = Vector2(0.05, 0.05)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
-[node name="grape" parent="." instance=ExtResource( 17 )]
-position = Vector2( 3103, 519 )
-scale = Vector2( 0.3, 0.3 )
+[node name="grape" type="Area2D" parent="." instance=ExtResource("17")]
+position = Vector2(3103, 519)
+scale = Vector2(0.3, 0.3)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
-[node name="finish" parent="." instance=ExtResource( 26 )]
-position = Vector2( 5088, 800 )
+[node name="finish" type="Area2D" parent="." instance=ExtResource("26")]
+position = Vector2(5088, 800)
+scale = Vector2(2, 2)
+collision_layer = 4
+script = ExtResource("19_n0w0k")
 
-[node name="player" parent="." instance=ExtResource( 19 )]
-position = Vector2( 544, -96 )
+[node name="player" type="CharacterBody2D" parent="." instance=ExtResource("19")]
+position = Vector2(544, -96)
+collision_mask = 6
+script = ExtResource("21_c5avd")
 
-[node name="HUD" parent="." instance=ExtResource( 23 )]
+[node name="HUD" type="CanvasLayer" parent="." instance=ExtResource("23")]
+script = ExtResource("23_evbad")
 
-[node name="cat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1169, 526 )
-scale = Vector2( 0.1, 0.1 )
+[node name="cat" type="Area2D" parent="." instance=ExtResource("2")]
+position = Vector2(1169, 526)
+scale = Vector2(0.1, 0.1)
+collision_layer = 4
+script = ExtResource("12_ekte5")
 
 [node name="stoneTimer" type="Timer" parent="."]
 

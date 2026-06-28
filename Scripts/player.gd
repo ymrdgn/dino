@@ -3,7 +3,6 @@ extends CharacterBody2D
 var main
 var stone
 var direction = 0
-var velocity = Vector2()
 var is_jumping = false
 var fall_has_played = false
 var hit = false
@@ -41,10 +40,8 @@ func _process(_delta):
 		var _error = get_tree().reload_current_scene()
 	
 	#move_and_collide(velocity) # duvarların içinden geçemiyoruz artık
-	set_velocity(velocity)
-	set_up_direction(Vector2(0,-1))
-	move_and_slide()
-	velocity = velocity #hareket ettir ve kaydır
+	up_direction = Vector2(0,-1)
+	move_and_slide() #hareket ettir ve kaydır
 	update_animation()
 func update_animation():
 	if hit == true :
